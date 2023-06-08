@@ -1,0 +1,95 @@
+
+.service-sec1{
+    width: 95%;
+    margin: 30px auto 30px auto;
+    display: flex;
+}
+
+.service-title{
+    width: 70%;
+}
+
+.add-gif{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-gif img{
+    width: 30rem;
+}
+
+.service-title p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+
+.service-title h1{
+    color: rgb(62, 169, 246);
+    font-size: 2.5rem;
+}
+
+.proto1 div{
+    display: flex;
+}
+
+.service-prototype div div img{
+    width: 15em;
+    height: 15em;
+    margin: 10px;
+}
+
+.service-prototype div div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.service-prototype div h3{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proto1,.proto2,.proto3,.proto4{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.service-sec2{
+    width: 95%;
+    margin: auto;
+}
+
+.service-prototype h1{
+    color: rgb(62, 169, 246);
+    font-size: 2.5rem;
+}
+
+
+.service-sec3{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.service-services h1{
+    color: rgb(62, 169, 246);
+    font-size: 2.5rem;
+}
+
+.consult1 div ul ,.consult2 div ul,.consult3 div ul,.consult4 div ul,.consult5 div ul{
+    margin-left: 5%;
+}
+
+.consult1 div ul li,.consult2 div ul li,.consult3 div ul li,.consult4 div ul li,.consult5 div ul li{
+    margin-top: 10px;
+}
+
+.consult1 h3,.consult2 h3,.consult3 h3,.consult4 h3,.consult5 h3{
+    margin-top: 20px;
+}
