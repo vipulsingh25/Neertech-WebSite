@@ -56,9 +56,9 @@ function Services(){
                             <h3>Wastewater Treatment and Management</h3>
                             <div>
                                 <ul>
-                                    <li>Customized solutions to meet specific waste water management needs.</li>
-                                    <li>Experienced team of experts in waste water treatment and management.</li>
-                                    <li>Cost-effective and sustainable waste water treatment options.</li>
+                                    <li>Customized solutions to meet specific ground water and waste water management needs.</li>
+                                    <li>Experienced team of experts in ground water and waste water treatment and management.</li>
+                                    <li>Cost-effective and sustainable ground water and waste water treatment options.</li>
                                 </ul>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ function Services(){
                             <h3>Filtration Technology</h3>
                             <div>
                                 <ul>
-                                    <li>Wide range of high-quality membranes and adsorbents for water treatment and desalination.</li>
+                                    <li>Wide range of high-quality membranes and adsorbents for food quality and desalination.</li>
                                     <li>Efficient and effective solutions for clients in various industries.</li>
                                     <li>Latest technology and innovative solutions.</li>
                                 </ul>
@@ -78,9 +78,9 @@ function Services(){
                             <h3>Water Quality Assesement</h3>
                             <div>
                                 <ul>
-                                    <li>Accurate and comprehensive reporting on wastewater quality.</li>
-                                    <li>Testing and analysis of wastewater to identify pollutants and contaminants.</li>
-                                    <li>Recommendations for wastewater treatment based on test results.</li>
+                                    <li>Accurate and comprehensive reporting on ground water and waste water quality.</li>
+                                    <li>Testing and analysis of ground water and waste water to identify pollutants and contaminants.</li>
+                                    <li>Recommendations for ground water and waste water treatment based on test results.</li>
                                 </ul>
                             </div>
                         </div>
