@@ -85,16 +85,7 @@ function Services(){
                             </div>
                         </div>
 
-                        <div className='consult4'>
-                            <h3>Green Fuel Hydrogen Production</h3>
-                            <div>
-                                <ul>
-                                    <li>Production of hydrogen gas using renewable energy sources.</li>
-                                    <li>Clean and sustainable option for use in a variety of applications.</li>
-                                    <li>Cutting-edge technology and innovative solutions.</li>
-                                </ul>
-                            </div>
-                        </div>
+
 
                         <div className='consult5'>
                             <h3>Food Preservation</h3>
