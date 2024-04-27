@@ -23,10 +23,9 @@ function Home(){
                             <p>Convert Your<br/>WASTE INTO VALUES:</p>
                         </div> */}
                         <div className="boxes">
-                            <div id="box1"><p>Waste Water Management</p></div>
+                            <div id="box1"><p>Ground & Waste Water Management</p></div>
                             <div id="box2"><p>Filtration Technology</p></div>
                             <div id="box3"><p>Water Quality Analysis</p></div>
-                            <div id="box4"><p>Green Fuel Hydrogen Gas Production</p></div>
                             <div id="box5"><p>Food Preservation</p></div>
                         </div>
                     </div>
