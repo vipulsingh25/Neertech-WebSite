@@ -35,8 +35,8 @@ function Navbar(){
                         <li><Link className={activeItem === '/' ? 'active' : 'link'} onClick={() => handleItemClick('/')} to='/'>Home</Link></li>
                         <li><Link className={activeItem === '/services' ? 'active' : 'link'} onClick={() => handleItemClick('/services')} to='/services'>Services</Link></li>
                         <li><Link className={activeItem === '/aboutus' ? 'active' : 'link'} onClick={() => handleItemClick('/aboutus')} to='/aboutus'>About Us</Link></li>
-                        <li><Link className={activeItem === '/contactus' ? 'active' : 'link'} onClick={() => handleItemClick('/contactus')} to='/contactus'>Contact Us</Link></li>
                         <li><Link className={activeItem === '/gallery' ? 'active' : 'link'} onClick={() => handleItemClick('/gallery')} to='/gallery'>Gallery</Link></li>
+                        <li><Link className={activeItem === '/contactus' ? 'active' : 'link'} onClick={() => handleItemClick('/contactus')} to='/contactus'>Contact Us</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-contact">
