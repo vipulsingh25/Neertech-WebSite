@@ -11,7 +11,7 @@ function Services(){
                 <div className='service-sec1'>
                     <div className='service-title'>
                         <h1>Services</h1>
-                        <p>At our company, we are dedicated to providing innovative and sustainable solutions in the fields of waste water consultancy, membrane technology, and green fuel hydrogen gas production. Our goal is to help our clients meet their specific needs and requirements while making a positive impact on the environment and the communities we serve.</p>
+                        <p>At our company, we are dedicated to providing innovative and sustainable solutions in the fields of waste water consultancy, membrane technology. Our goal is to help our clients meet their specific needs and requirements while making a positive impact on the environment and the communities we serve.</p>
                     </div>
                     <div className='add-gif'>
                         <img src={plantgif}></img>
