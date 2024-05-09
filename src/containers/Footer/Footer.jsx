@@ -74,7 +74,7 @@ function Footer(){
             </div>
 
             <div className='footer-split2'>
-                <p>© 2023 NeerTech Pvt.Ltd. All Rights Reserved | In Collaboration with <a href='https://weslab1.com'>WESLAB</a></p>
+                <p>© 2023 NeerTech Pvt.Ltd. All Rights Reserved | In Collaboration with <a href='https://www.weslab.co.in'>WESLAB</a></p>
             </div>
         </div>
         </>
