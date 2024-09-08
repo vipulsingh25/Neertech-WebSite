@@ -23,6 +23,9 @@ import m5 from './m5.png';
 import mp1 from './mp1.jpeg';
 import mp2 from './mp2.jpg';
 import mp3 from './mp3.jpg';
+import teammember2 from './teammember2.jpg';
+import NSS from './NSS.png';
+import Alphion from './Alp.png'
 
 export {
     Logo,
@@ -34,4 +37,6 @@ export {
     g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11,
     m1,m2,m3,m4,m5,
     mp1,mp2,mp3,
+    teammember2,
+    NSS,Alphion,
 };
