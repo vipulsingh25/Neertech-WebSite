@@ -41,3 +41,298 @@
         height: 20rem;
     }
 } */
+
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ── */
+:root {
+    --clr-bg: #f5f4f0;
+    --clr-dark: #1a1a1a;
+    --clr-accent: #c8a96e;
+    --clr-mid: #6b6b6b;
+    --clr-card-bg: #ffffff;
+    --clr-overlay: rgba(26, 26, 26, 0.55);
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.18);
+    --transition: 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Page background ── */
+body {
+    background-color: var(--clr-bg);
+}
+
+/* ══════════════════════════════════
+   HEADER
+══════════════════════════════════ */
+.gallery-header {
+    width: 100%;
+    padding: 72px 24px 40px;
+    text-align: center;
+    background-color: var(--clr-bg);
+}
+
+.gallery-header-inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.gallery-label {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    margin-bottom: 14px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--clr-dark);
+    margin: 0 0 14px;
+    line-height: 1.1;
+}
+
+.gallery-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--clr-mid);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.gallery-header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--clr-accent);
+    border-radius: 2px;
+    margin: 32px auto 0;
+}
+
+/* ══════════════════════════════════
+   SECTION WRAPPER  (keep class name)
+══════════════════════════════════ */
+.gallery-sec2 {
+    background-color: var(--clr-bg);
+    padding: 8px 0 80px;
+}
+
+/* ══════════════════════════════════
+   GRID  (keep class name)
+══════════════════════════════════ */
+.gsec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ══════════════════════════════════
+   CARD  (keep class name .g1)
+══════════════════════════════════ */
+.g1 {
+    margin: 0;
+    padding: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--clr-card-bg);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    /* staggered fade-in */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardReveal 0.55s ease forwards;
+    animation-delay: var(--delay, 0ms);
+}
+
+@keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.g1-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.g1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition);
+}
+
+/* ── Overlay ── */
+.g1-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--clr-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.g1-zoom {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1;
+    transform: scale(0.7);
+    transition: transform var(--transition);
+}
+
+.g1:hover img { transform: scale(1.07); }
+.g1:hover .g1-overlay { opacity: 1; }
+.g1:hover .g1-zoom { transform: scale(1); }
+
+/* ══════════════════════════════════
+   LIGHTBOX
+══════════════════════════════════ */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.22s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.lightbox-content {
+    position: relative;
+    max-width: 88vw;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+
+.lightbox-counter {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 22px;
+    right: 28px;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1001;
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+.lightbox-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1001;
+}
+
+.lightbox-arrow:hover { background: rgba(255,255,255,0.28); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+
+/* ══════════════════════════════════
+   PAGE TITLE (kept for compatibility)
+══════════════════════════════════ */
+.page-title {
+    width: 100%;
+    height: 58.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+}
+
+.page-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--clr-dark);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+
+/* Tablet */
+@media only screen and (max-width: 900px) {
+    .gsec {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        width: 94%;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .gallery-header { padding: 48px 20px 28px; }
+
+    .gsec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 96%;
+    }
+
+    .g1 img { width: 100%; height: 100%; }
+
+    .lightbox-arrow { display: none; }
+    .lightbox-content { max-width: 96vw; }
+}
+
+/* Very small phones */
+@media only screen and (max-width: 380px) {
+    .gsec { grid-template-columns: 1fr; }
+}
