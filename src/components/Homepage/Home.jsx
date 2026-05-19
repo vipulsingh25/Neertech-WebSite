@@ -1,211 +1,133 @@
-// import React from "react";
-// import './Home.css';
-// // import { Navbar,Footer } from "../../containers";
-// // import systembg from '../../images/systembg.gif';
-// import settingbg from '../../images/homepageimg1.png';
-// // import cleanwater from '../../images/cleanwater.png';
-// // import renewableenergy from '../../images/renewableenergy.png';
-// // import climate from '../../images/climate.png';
-// import plantgif from '../../images/plantgif.gif';
-// import director from '../../images/director.jpg';
-// import { FiInstagram,FiFacebook,FiLinkedin} from 'react-icons/fi';
-// import {m1,m2,m3,m4,m5} from '../../images/image';
-// // import {mp1,mp2,mp3} from '../../images/image';
-
-// function Home(){
-//     return(
-//         <>
-//             <div className="main-section">
-//                 <div className="container">
-//                     <div className="home-caption">
-//                         <div className="caption-text"><h3>"We have to handover the earth,<br/> the air, the land and the water to the children<br/> at least it was handed over to us"</h3></div>
-//                         {/* <div className="caption2">
-//                             <p>Convert Your<br/>WASTE INTO VALUES:</p>
-//                         </div> */}
-//                         <div className="boxes">
-//                             <div id="box1"><p>Ground & Waste Water Management</p></div>
-//                             <div id="box2"><p>Filtration Technology</p></div>
-//                             <div id="box3"><p>Water Quality Analysis</p></div>
-//                             <div id="box5"><p>Food Preservation</p></div>
-//                         </div>
-//                     </div>
-//                     <div className="settingbg">
-//                         <img id="setting" src={settingbg} alt=""></img>
-//                         {/* <img id="setting" src={mp2}></img>
-//                         <img id="setting" src={mp3}></img> */}
-//                         {/* <div className="plant"><img src={plant}></img></div> */}
-//                     </div>
-//                 </div>
-
-//                 <div className="section-2">
-//                     <div className="about-section">
-//                         <div className="text-section">
-//                             <h1>Welcome to NeerTech</h1>
-//                             <p>Our company is a leading provider of water-based consultancy services, specializing in treating and managing wastewater/groundwater through innovative technologies. Our team of experts has extensive experience in the field and is committed to providing customized solutions to meet the specific needs of our clients.
-//                             </p>  
-//                         </div>
-//                         <div className="about-img">
-//                             <img src={plantgif} alt=""></img>
-//                         </div>
-//                     </div>
-//                 </div>
-
-//                 <div className='partners-sec'>
-//                     <div className="partners-head"><h1>Our Partners</h1></div>
-//                     <div className="partners-details">
-//                         <div className="partner"><img src={m1} alt=""></img></div>
-//                         <div className="partner"><img src={m2} alt=""></img></div>
-//                         <div className="partner"><img src={m3} alt=""></img></div>
-//                         <div className="partner"><img src={m4} alt=""></img></div>
-//                         <div className="partner"><img src={m5} alt=""></img></div>
-//                     </div>
-//                 </div>
-
-//                 <div className="section-3">
-//                     <div className="head-sec3"><h1>Meet Our Team</h1></div>
-//                     <div className="team-frame">
-//                         <div className="frame1">
-//                             <div className="team-img1">
-//                                 <img src={director} alt=""/>
-//                             </div>
-//                             <div className="team-del">
-//                                 <h1>Dr. Somak Chatterjee</h1>
-//                                 <h2>CEO & Founding Director</h2>
-//                                 <div className='social-team'>
-//                                     <i><FiInstagram className='size'/></i>
-//                                     <i><FiFacebook className='size'/></i>
-//                                     <i><FiLinkedin className='size'/></i>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div className="team-message">
-//                             <h3>Message:</h3>
-//                             <p>"At Neertech, we try to create innovative routes, yet simple and cost-effective, to provide solutions for some complex problems. The range of problems varies according to the customer's choice and the timelines expected. Here, we are committed to solving three basic crises of human life, i.e., water, energy and food." </p>
-//                         </div>
-//                     </div>
-//                 </div>
-
-//             </div>
-//         </>
-//     );
-// }
-
-// export default Home;
-
-
-
-
-
-
-
-
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import './Home.css';
-// import { Navbar,Footer } from "../../containers";
-// import systembg from '../../images/systembg.gif';
 import settingbg from '../../images/homepageimg1.png';
-// import cleanwater from '../../images/cleanwater.png';
-// import renewableenergy from '../../images/renewableenergy.png';
-// import climate from '../../images/climate.png';
 import plantgif from '../../images/plantgif.gif';
 import director from '../../images/director.jpg';
-import { FiInstagram,FiFacebook,FiLinkedin} from 'react-icons/fi';
-import {m1,m2,m3,m4,m5,teammember2,NSS,Alphion} from '../../images/image';
-// import {mp1,mp2,mp3} from '../../images/image';
+import { FiLinkedin, FiDroplet, FiFilter, FiBarChart2, FiPackage } from 'react-icons/fi';
+import { m1, m2, m3, m4, m5, teammember2, NSS, Alphion } from '../../images/image';
 
-function Home(){
-    return(
-        <>
-            <div className="main-section">
-                <div className="container">
-                    <div className="home-caption">
-                        <div className="caption-text"><h3>"We have to handover the earth,<br/> the air, the land and the water to the children<br/> at least it was handed over to us"</h3></div>
-                        {/* <div className="caption2">
-                            <p>Convert Your<br/>WASTE INTO VALUES:</p>
-                        </div> */}
-                        <div className="boxes">
-                            <div id="box1"><p>Ground & Waste Water Management</p></div>
-                            <div id="box2"><p>Filtration Technology</p></div>
-                            <div id="box3"><p>Water Quality Analysis</p></div>
-                            <div id="box5"><p>Food Preservation</p></div>
-                        </div>
-                    </div>
-                    <div className="settingbg">
-                        <img id="setting" src={settingbg} alt=""></img>
-                        {/* <img id="setting" src={mp2}></img>
-                        <img id="setting" src={mp3}></img> */}
-                        {/* <div className="plant"><img src={plant}></img></div> */}
-                    </div>
-                </div>
+const services = [
+  { icon: <FiDroplet />, label: "Ground & Waste Water Management", id: "box1" },
+  { icon: <FiFilter />,  label: "Filtration Technology",           id: "box2" },
+  { icon: <FiBarChart2 />, label: "Water Quality Analysis",        id: "box3" },
+  { icon: <FiPackage />, label: "Food Preservation",               id: "box5" },
+];
 
-                <div className="section-2">
-                    <div className="about-section">
-                        <div className="text-section">
-                            <h1>Welcome to NeerTech</h1>
-                            <p>Our company is a leading provider of water-based consultancy services, specializing in treating and managing wastewater/groundwater through innovative technologies. Our team of experts has extensive experience in the field and is committed to providing customized solutions to meet the specific needs of our clients.
-                            </p>  
-                        </div>
-                        <div className="about-img">
-                            <img src={plantgif} alt=""></img>
-                        </div>
-                    </div>
-                </div>
+const partners = [m1, m2, m3, m4, m5, NSS, Alphion];
 
-                <div className='partners-sec'>
-                    <div className="partners-head"><h1>Our Partners</h1></div>
-                    <div className="partners-details">
-                        <div className="partner"><img src={m1} alt=""></img></div>
-                        <div className="partner"><img src={m2} alt=""></img></div>
-                        <div className="partner"><img src={m3} alt=""></img></div>
-                        <div className="partner"><img src={m4} alt=""></img></div>
-                        <div className="partner"><img src={m5} alt=""></img></div>
-                        <div className="partner"><img src={NSS} alt=""></img></div>
-                        <div className="partner"><img src={Alphion} alt=""></img></div>
-                    </div>
-                </div>
+const team = [
+  { img: director,      name: "Dr. Somak Chatterjee", role: "CEO & Founding Director" },
+  { img: teammember2,   name: "Ankit Pal",             role: "Core Member" },
+];
 
-                <div className="section-3">
-                    <div className="head-sec3"><h1>Meet Our Team</h1></div>
-                    <div className="team-frame">
-                        <div className="frame1">
-                            <div className="team-img1">
-                                <img src={director} alt=""/>
-                            </div>
-                            <div className="team-del">
-                                <h1>Dr. Somak Chatterjee</h1>
-                                <h2>CEO & Founding Director</h2>
-                                <div className='social-team'>
-                                    {/* <i><FiInstagram className='size'/></i> */}
-                                    {/* <i><FiFacebook className='size'/></i> */}
-                                    <i><FiLinkedin className='size'/></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="frame2">
-                            <div className="team-img1">
-                                <img src={teammember2} alt=""/>
-                            </div>
-                            <div className="team-del">
-                                <h1>Ankit Pal</h1>
-                                <h2>Core Member</h2>
-                                <div className='social-team'>
-                                    {/* <i><FiInstagram className='size'/></i> */}
-                                    {/* <i><FiFacebook className='size'/></i> */}
-                                    <i><FiLinkedin className='size'/></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <div className="team-message">
-                            <h3>Message:</h3>
-                            <p>"At Neertech, we try to create innovative routes, yet simple and cost-effective, to provide solutions for some complex problems. The range of problems varies according to the customer's choice and the timelines expected. Here, we are committed to solving three basic crises of human life, i.e., water, energy and food." </p>
-                        </div> */}
-                </div>
-
-            </div>
-        </>
+/* ── tiny scroll-reveal hook ── */
+function useReveal() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('revealed'); obs.unobserve(el); } },
+      { threshold: 0.12 }
     );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return ref;
+}
+
+function RevealBox({ className, children, delay = 0 }) {
+  const ref = useReveal();
+  return (
+    <div ref={ref} className={`reveal-box ${className || ''}`} style={{ '--reveal-delay': `${delay}ms` }}>
+      {children}
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <>
+      {/* ══ HERO ══ */}
+      <div className="main-section">
+        <div className="container">
+          <div className="home-caption">
+            <div className="caption-tag">Water · Environment · Innovation</div>
+            <div className="caption-text">
+              <h3>"We have to handover the earth, the air, the land and the water to the children at least as it was handed over to us"</h3>
+            </div>
+            <div className="boxes">
+              {services.map((s, i) => (
+                <div className="service-box" id={s.id} key={s.id} style={{ '--i': i }}>
+                  <span className="service-icon">{s.icon}</span>
+                  <p>{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="settingbg">
+            <img id="setting" src={settingbg} alt="NeerTech hero visual" />
+            <div className="hero-blob" />
+          </div>
+        </div>
+
+        {/* ══ ABOUT ══ */}
+        <div className="section-2">
+          <div className="about-section">
+            <RevealBox className="text-section" delay={0}>
+              <span className="section-tag">Who We Are</span>
+              <h1>Welcome to NeerTech</h1>
+              <p>Our company is a leading provider of water-based consultancy services, specializing in treating and managing wastewater and groundwater through innovative technologies. Our team of experts is committed to providing customized solutions to meet the specific needs of our clients.</p>
+            </RevealBox>
+            <RevealBox className="about-img" delay={150}>
+              <img src={plantgif} alt="Plant animation" />
+            </RevealBox>
+          </div>
+        </div>
+
+        {/* ══ PARTNERS ══ */}
+        <div className="partners-sec">
+          <RevealBox className="partners-head">
+            <span className="section-tag">Trusted By</span>
+            <h1>Our Partners</h1>
+          </RevealBox>
+          <div className="partners-track-wrap">
+            <div className="partners-track">
+              {[...partners, ...partners].map((src, i) => (
+                <div className="partner" key={i}><img src={src} alt={`Partner ${i}`} /></div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ══ TEAM ══ */}
+        <div className="section-3">
+          <RevealBox className="head-sec3">
+            <span className="section-tag">The People</span>
+            <h1>Meet Our Team</h1>
+          </RevealBox>
+          <div className="team-frame">
+            {team.map((member, i) => (
+              <RevealBox className={`frame${i + 1} team-card`} delay={i * 120} key={member.name}>
+                <div className="team-img1">
+                  <img src={member.img} alt={member.name} />
+                  <div className="team-img-ring" />
+                </div>
+                <div className="team-del">
+                  <h1>{member.name}</h1>
+                  <h2>{member.role}</h2>
+                  <div className="social-team">
+                    <a href="#" aria-label="LinkedIn"><FiLinkedin className="size" /></a>
+                  </div>
+                </div>
+              </RevealBox>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </>
+  );
 }
 
 export default Home;
-
